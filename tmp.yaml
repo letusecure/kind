@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh", "-c", "env" ]
+      env:
+        - name: PERSON_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: person-map
+              key: name
+        - name: PERSON_ROLE
+          valueFrom:
+            configMapKeyRef:
+              name: person-map
+              key: job
+  restartPolicy: Never
+
