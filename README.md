@@ -3,7 +3,7 @@
 Refer https://kind.sigs.k8s.io/docs/user/quick-start/ for installing KIND on your preferred host.
 
 
-#POST Installation run
+After Installation of kIND, clone the config yaml repo
 ```console
 foo@bar:~$ git clone git@github.com:letusecure/kind.git
 foo
@@ -11,7 +11,7 @@ foo
 
 
 
-#COMMAND to install Kubernetes Cluster using KIND 
+Launch Kubernetes Cluster using KIND 
 ```console
 foo@bar:~$ kind create cluster --config=./kind/cluster.yaml
 foo
